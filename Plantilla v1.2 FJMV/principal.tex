@@ -1,0 +1,89 @@
+\documentclass[12pt, spanish]{article}
+\usepackage[a4paper]{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage{hyperref}
+\usepackage[spanish, es-tabla]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[toc,page,title]{appendix}
+\usepackage{times}
+\usepackage{caption}
+
+
+%%%%%%%%%%%fecha%%%%%%%%%%%
+\usepackage{titling}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\usepackage{listings}
+\lstset{ frame=Ltb,
+	framerule=0pt,
+	aboveskip=0.5cm,
+	framextopmargin=3pt,
+	framexbottommargin=3pt,
+	framexleftmargin=0.4cm,
+	framesep=0pt,
+	rulesep=.4pt,
+	backgroundcolor=\color{gray97},
+	rulesepcolor=\color{black},
+	%
+	stringstyle=\ttfamily,
+	showstringspaces = false,
+	basicstyle=\small\ttfamily,
+	commentstyle=\color{gray45},
+	keywordstyle=\bfseries,
+	%
+	numbers=left,
+	numbersep=15pt,
+	numberstyle=\tiny,
+	numberfirstline = false,
+	breaklines=true,
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+{\lstset{basicstyle=\ttfamily}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+	backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C}
+{language=C,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\input{portada}
+%%%%%%%%%%%%%%%%%%%% TABLA DE CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%}
+\input{indice}
+\newpage
+\input{indice-figuras}
+%\newpage
+%\addcontentsline{toc}{chapter}{\listtablename}
+%\input{indice-tabla}
+%%%%%%%%%%%%%%%%%%%% FIN TABLA DE CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{resumen}
+\input{introduccion}
+\input{objetivo}
+\input{desarrollo}
+
+\input{conclusion} 
+
+%\newpage
+%\input{bibliografia}  
+
+%\input{anexos}
+\end{document}
