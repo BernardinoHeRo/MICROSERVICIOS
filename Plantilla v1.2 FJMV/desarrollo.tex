@@ -45,14 +45,73 @@
 	\subsubsection{Desarrollo de microservicios}
 	Iniciamos con el proceso de desarrollo de microservicios, primero definimos que tipo de datos aceptará y entregará nuestro microservicio, para este caso especifico se decide que será en Json.\\
 	
-	Utilizando MVC definimos las entidades de nuestra base de datos en el apartado \textbf{model}, en este se establece la cardinalidad que hemos definido en nuestro diagrama entidad relación que diseñamos durante el análisis de requerimientos, es aquí donde definimos los atributos que contendrá la tabla, ademas del nombre de la misma todo con notaciones que pertenecen a dependencias utilizadas para \textbf{maven} apoyados del framework \textbf{Spring Boot.}
+	Utilizando MVC definimos las entidades de nuestra base de datos en el apartado \textbf{model}, en este se establece la cardinalidad que hemos definido en nuestro diagrama entidad relación que diseñamos durante el análisis de requerimientos, es aquí donde definimos los atributos que contendrá la tabla, ademas del nombre de la misma todo con notaciones que pertenecen a dependencias utilizadas para \textbf{maven} apoyados del framework \textbf{Spring Boot.}\\
+	
+	Utilizamos los controladores para poder manipular las re-direcciones dentro de nuestro sistema, ademas esta es la capa donde definimos métodos de entrada y salida de datos, es decir por aquí ingresan las peticiones y retornamos las respuestas, también en este apartado es en donde inyectamos las dependencias InterfaceXXXXXService, dichas dependencias proveen los métodos para traer o insertar información a nuestra base de datos.\\
+	
+	Utilizamos la implementación los servicios para poder comunicarnos con el repositorio, así podemos tener acceso a base de datos, definimos métodos como son listar, crear, actualizar, búsqueda por x campo.
+	Dichos métodos serán bien desarrollados en ImplxxxxxxxService y serán consumidos en el controlador para brindar funcionalidad a nuestro microservicio.
+	\begin{lstlisting}[style=JavaStyle, caption=Ejemplo de definición de interfacexxxxxxService, label=lst:java]
+		package com.coffeeandcode.service;
+		
+		import com.coffeeandcode.model.AcademicDataModel;
+		
+		import java.util.List;
+		import java.util.Optional;
+		
+		public interface InterfaceAcademicDataService {
+			public List<AcademicDataModel> listallAcademicDatas();
+			
+			public Optional<AcademicDataModel> getAcademicDataById(int idAcademicData);
+			
+			public AcademicDataModel createAcademicData(AcademicDataModel academicDatamodel);
+			
+			public AcademicDataModel saveAcademicData(AcademicDataModel academicDatamodel);
+			
+			public AcademicDataModel updateAcademicData(int idAcademicData, AcademicDataModel academicDatamodel);
+			
+			public boolean deleteAcademicData(int idAcademicData);
+		}
+	\end{lstlisting}
+	
+	\subsubsection{Prueba de funcionamiento con Postman}
+	Para probar la funcionalidad de nuestro servicios, existen dos maneras, una es con un software llenado \textbf{Postman} y la otra es desde la terminal de nuestro sistema, donde estemos trabajando.\\
+	En esta ocasión probaremos con Postman debido a la facilidad que nos provee, antes cabe mencionar que los métodos están desarrollados en el controlador, dichos metodos reciben json y devuelven json, el contenido es definido por la logia implementada.
+	\begin{lstlisting}[style=JavaStyle, caption=Ejemplo de metodos desarrollados del lado del controlador, label=lst:java]
+		public class PersonalDataController {
+		private final InterfacePersonalDataService interfacePersonalDataService;
+		
+		@Autowired
+		public PersonalDataController(InterfacePersonalDataService interfacePersonalDataService) {
+			this.interfacePersonalDataService = interfacePersonalDataService;
+		}
+		
+		@PostMapping("/save")
+		public ResponseEntity<Object> createPersonalData(@RequestBody PersonalDataModel personalData)...
+		
+		@GetMapping("/list")
+		public ResponseEntity<Object> index()...
+	
+		@PutMapping("/update/{id}")
+		public ResponseEntity<Object> updatePersonalData(@PathVariable int id, @RequestBody PersonalDataModel personalData)...
+		
+		@DeleteMapping("/delete/{id}")
+		public ResponseEntity<String> deletePersonalData(@PathVariable int id)...
+		
+		@GetMapping("/search/{id}")
+		public ResponseEntity<Object> getPersonalData(@PathVariable int id)
+	
+		}
+	\end{lstlisting}
+	Se omite el desarrollo debido a que algunos métodos son demasiados largos para mostrarlos, procederemos a explicar el funcionamiento breve de cada uno de los métodos.
+	\begin{itemize}
+		\item createPersonalData: Nos permite ingresar un json con una estructura especifica y mediante interfacePersonalDataService podremos agregar los datos contenidos en el json a la base de datos, dicho método nos devuelve el json del elemento que se agrega, si por alguna cuestión no es posible agregar nos devuelve un mensaje de error diciendo que no fue posible el almacenamiento.
+		\item index: ejecuta una consulta en la cual nos regresa todos los datos contenidos en la base de datos. 
+		\item updatePersonalData: Este método a razón de un id nos permite actualizar el contenido directamente de la base de datos del elemento deseado.
+		\item deletePersonalData: Nos permite eliminar un elemento a razón de recibir el id de dicho elemento.
+		\item getPersonalData: Nos devuelve un objeto especifico, lo pediremos a razón del id proporcionado.
+	\end{itemize}
 
-	
-	
-	
-	
-	
-	Describe tus diagramas de clase utilizado en caso de  haber todos elementos empleados.
-	
-\subsection{Resultados}
-Aquí describir los resultados obtenidos evidencia del programa funcionando y describir las funcionalidades puedes incluir imágenes.
+	Dichos métodos anteriormente explicados se pueden combinar entre si para proveer de más funcionalidades a nuestro microservicio, si alguna consulta no hace lo que se requiere y se pretende ser las especifico podemos definir una consulta nativa de SQL en el repositorio correspondiente.
+%\subsection{Resultados}
+%Aquí describir los resultados obtenidos evidencia del programa funcionando y describir las funcionalidades puedes incluir imágenes.

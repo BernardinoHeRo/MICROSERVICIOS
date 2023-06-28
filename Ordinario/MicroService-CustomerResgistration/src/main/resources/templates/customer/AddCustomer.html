@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Cliente</title>
+</head>
+<body>
+<h1 th:text="${mensaje}">Registro de Cliente</h1>
+
+<form action="/registrar-cliente" method="post" th:object="${customerNew}">
+  <label for="names">Nombres:</label>
+  <input type="text" id="names" name="names" th:field="*{names}" required>
+
+  <label for="lastname">Apellido Paterno:</label>
+  <input type="text" id="lastname" name="lastname" th:field="*{lastname}" required>
+
+  <label for="motherslastname">Apellido Materno:</label>
+  <input type="text" id="motherslastname" name="motherslastname" th:field="*{motherslastname}" required>
+
+  <label for="age">Edad:</label>
+  <input type="number" id="age" name="age" th:field="*{age}" required>
+
+  <label for="weight">Peso (kg):</label>
+  <input type="number" id="weight" name="weight" step="0.01" th:field="*{weight}" required>
+
+  <label for="height">Estatura (cm):</label>
+  <input type="number" id="height" name="height" step="0.01" th:field="*{height}" required>
+  <br><br><br><br><br>
+  <label for="medicalcondition">Padecimiento médico:</label>
+  <input type="text" id="medicalcondition" name="medicalcondition" th:field="*{medicalcondition}">
+
+  <label for="druguse">Consumo de medicamentos:</label>
+  <input type="text" id="druguse" name="druguse" th:field="*{druguse}">
+
+  <label for="bloodpressure">Presión arterial:</label>
+  <input type="text" id="bloodpressure" name="bloodpressure" th:field="*{bloodpressure}">
+  <br><br><br><br><br>
+  <label for="postalcode">Código Postal:</label>
+  <input type="number" id="postalcode" name="postalcode" th:field="*{postalcode}">
+
+  <label for="state">Estado:</label>
+  <input type="text" id="state" name="state" th:field="*{state}">
+
+  <label for="cologne">Colonia:</label>
+  <input type="text" id="cologne" name="cologne" th:field="*{cologne}">
+
+  <label for="municipality">Municipio:</label>
+  <input type="text" id="municipality" name="municipality" th:field="*{municipality}">
+
+  <label for="housenumber">Número de Casa:</label>
+  <input type="text" id="housenumber" name="housenumber" th:field="*{housenumber}">
+
+  <!-- Agrega los demás campos del formulario según los atributos de CustomerModel -->
+
+  <input type="submit" value="Registrar">
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+package com.coffeeandcode.configuration;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.init.DataSourceInitializer;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
+
+import javax.sql.DataSource;
+@Configuration
+public class DatabaseConfiguration {
+
+	@Value("classpath:static/sql/mexico.sql")
+	private org.springframework.core.io.Resource sqlScript;
+	@Bean
+	public DataSourceInitializer dataSourceInitializer(DataSource dataSource, JdbcTemplate jdbcTemplate) {
+		DataSourceInitializer initializer = new DataSourceInitializer();
+		initializer.setDataSource(dataSource);
+
+		ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator();
+		//databasePopulator.addScript(tables);
+		databasePopulator.addScript(sqlScript);
+
+		// Verificar si todas las tablas están vacías
+
+		if (areAllTablesEmpty(jdbcTemplate)) {
+			initializer.setDatabasePopulator(databasePopulator); // Establecer el populador de base de datos
+		} else {
+			// Las tablas ya contienen datos, no se ejecutarán los scripts
+			System.out.println("Las tablas ya contienen datos. No se ejecutarán los scripts de inicialización.");
+		}
+
+		return initializer;
+	}
+	private boolean areAllTablesEmpty(JdbcTemplate jdbcTemplate) {
+		try {
+			// Verificar si todas las tablas están vacías
+			String query = "SELECT COUNT(*) FROM paises";
+			Integer count = jdbcTemplate.queryForObject(query, Integer.class);
+			return count != null && count == 0;
+		} catch (Exception e) {
+			return true; // Se produce una excepción si la tabla no existe, se considera como vacía
+		}
+	}
+}

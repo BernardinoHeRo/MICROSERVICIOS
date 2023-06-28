@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Servicio</title>
+</head>
+<body>
+<h1 th:text="${mensaje}">Registrar Servicio</h1>
+
+<form th:action="@{/services/save}" method="POST" th:object="${serviceNew}">
+    <label for="paymentconcept">Concepto de Pago:</label>
+    <input type="text" id="paymentconcept" name="paymentconcept" th:field="*{paymentconcept}">
+
+    <label for="amount">Monto:</label>
+    <input type="number" id="amount" name="amount" step="0.01" th:field="*{amount}">
+
+    <label for="descriptionpayment">Descripción del Pago:</label>
+    <input type="text" id="descriptionpayment" name="descriptionpayment" th:field="*{descriptionpayment}">
+
+    <!-- Agrega los demás campos del formulario según los atributos de ServiceModel -->
+
+    <input type="submit" value="Registrar">
+</form>
+</body>
+</html>

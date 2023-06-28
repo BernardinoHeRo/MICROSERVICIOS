@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  19 JUN 2023 17:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  19 JUN 2023 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -256,20 +256,6 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count279
 Package caption Info: hyperref package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
-Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip50
-\thanksmargin=\skip51
-\droptitle=\skip52
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count280
 \lst@gtempboxa=\box50
@@ -294,8 +280,32 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip50
+\thanksmargin=\skip51
+\droptitle=\skip52
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -310,27 +320,31 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
+
+
+LaTeX Warning: Label `lst:java' multiply defined.
+
 )
 \openout1 = `principal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -388,7 +402,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 65.
+Package hyperref Info: Link coloring ON on input line 84.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -401,16 +415,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
 
 (./principal.out) (./principal.out)
 \@outlinefile=\write3
 \openout3 = `principal.out'.
 
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -449,18 +463,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \newpage
-              [1] (./indice-figuras.tex (./principal.lof
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
-)
-\tf@lof=\write5
-\openout5 = `principal.lof'.
-
-) [2] (./resumen.tex)
-(./introduccion.tex
+l.96 \newpage
+              [1] (./resumen.tex) (./introduccion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
@@ -474,13 +478,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.9 		\item S
-             pring Boot 3.0.1 [1]
+l.5 		\item J
+             ava correto-17 versión 17.0.17) [1]
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<img/mvc.png, id=84, 340.27126pt x 386.44376pt>
+<img/mvc.png, id=79, 340.27126pt x 386.44376pt>
 File: img/mvc.png Graphic file (type png)
 <use img/mvc.png>
 Package pdftex.def Info: img/mvc.png  used on input line 27.
@@ -490,12 +494,6 @@ Overfull \hbox (2.28001pt too wide) in paragraph at lines 26--33
 $[]$  $[]$ 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.34 	\subsubsection
-                    {Servicios, interfaces de repositorios, implementación ...
 [2]
 Overfull \hbox (0.43901pt too wide) in paragraph at lines 39--40
 \OT1/ptm/m/n/12 ac-ce-so a da-tos y pro-por-cio-nan una for-ma es-tan-da-ri-za-
@@ -507,30 +505,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-) (./conclusion.tex [3 <./img/mvc.png>]) [4] (./principal.aux
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+[3 <./img/mvc.png>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 54.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
+4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4])
+(./conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+[5]) [6] (./principal.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `principal.out' has not changed.
-(rerunfilecheck)             Checksum: E1B442362861B2ECF5E2A17B4A211D74;1818.
+(rerunfilecheck)             Checksum: 6F9EBA158393F42CEC0196CAB44F988D;1970.
  ) 
 Here is how much of TeX's memory you used:
- 12961 strings out of 478287
- 208721 string characters out of 5849289
- 520616 words of memory out of 5000000
- 30969 multiletter control sequences out of 15000+600000
- 483761 words of font info for 52 fonts, out of 8000000 for 9000
+ 13812 strings out of 478287
+ 217806 string characters out of 5849289
+ 809763 words of memory out of 5000000
+ 31767 multiletter control sequences out of 15000+600000
+ 485861 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,664b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,63p,664b,1921s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb>
-Output written on principal.pdf (7 pages, 252935 bytes).
+e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb>
+Output written on principal.pdf (8 pages, 275690 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
  104 words of extra memory for PDF output out of 10000 (max. 10000000)
 

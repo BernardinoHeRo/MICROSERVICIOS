@@ -1,4 +1,7 @@
 \section{Conclusión}
-Explique por qué su diseño sirve (o nó) y qué hace falta por hacer.
-Responda las expectativas generadas en la Introducción.
-Analice sus resultados críticamente y diga si son creíbles y responda qué tan seguras son sus propuestas.
+La implementación de microservicios es similar al desarrollo de un sistema Web, con la única diferencia que se utilizan los métodos:  Post para agregar, Put para actualizar, Get pata leer, Delete para eliminar.\\
+Si no tenemos cuidado cuando se realicen la implementación de la cardinalidad entre nuestras entidades podemos tener errores de lectura como establecer bucles infinitos en las cardinalidades bidireccionales, no son tan complicadas de solucionar pero si pueden llegar a ser un dolor de cabeza, más si es nuestro primer acercamiento a microservicios, esto se debe a la serialización y deserialización de los objetos Json que manejamos para dicha implementación.\\
+Estos microservicios se pueden consumir entre ellos mismo o podemos consumirlos desde aplicaciones monolíticas, cabe mencionar que cada uno de los tipos de desarrollo pueden o no ser fundamentales para un proyecto concreto y esto dependerá de las necesidades del proyecto, no se deben usar solo por novedad, se debe realizar un análisis minucioso de los requerimientos y poder verificar todas las alternativas adaptables al sistema por que puede suceder que el sistema a desarrollar no se pretende escalar entonces no tendría sentido implementar microservicios.\\
+
+
+Podemos encontrar la implementación en la siguiente liga del repositorio GitHub:\\ https://github.com/BernardinoHeRo/MICROSERVICIOS.git

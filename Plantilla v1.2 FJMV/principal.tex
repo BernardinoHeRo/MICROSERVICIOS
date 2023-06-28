@@ -10,6 +10,25 @@
 \usepackage[toc,page,title]{appendix}
 \usepackage{times}
 \usepackage{caption}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\lstdefinestyle{JavaStyle}{
+	language=Java,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green!60!black},
+	stringstyle=\color{purple},
+	showstringspaces=false,
+	breaklines=true,
+	frame=single,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	tabsize=4
+}
+
 
 
 %%%%%%%%%%%fecha%%%%%%%%%%%
@@ -67,8 +86,8 @@
 \input{portada}
 %%%%%%%%%%%%%%%%%%%% TABLA DE CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%}
 \input{indice}
-\newpage
-\input{indice-figuras}
+%\newpage
+%\input{indice-figuras}
 %\newpage
 %\addcontentsline{toc}{chapter}{\listtablename}
 %\input{indice-tabla}
